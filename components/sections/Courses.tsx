@@ -1,5 +1,13 @@
+import CourseCard from "../shared/cards/CourseCard";
+
 const Courses = () => {
-  return <section className="min-h-[80vh] fl_center h3">Courses section</section>;
+  return (
+    <section className="wrapper grid gap-4 grid-cols-1 md:grid-cols-2">
+      {Array.from({ length: 3 }).map((_, i) => (
+        <CourseCard key={"course-" + i} />
+      ))}
+    </section>
+  );
 };
 
 export default Courses;
